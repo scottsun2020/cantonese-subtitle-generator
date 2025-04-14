@@ -36,4 +36,4 @@ if uploaded_file is not None:
     editable_srt = st.text_area("📝 Edit Subtitles (SRT format)", value="".join(srt_blocks), height=400)
 
     # Download final SRT
-    st.download_button("📥 Download SRT File", data=editable_srt, file_name="subtitles.srt", mime="text/plain")
+    st.download_button("📥 Download SRT File", data=editable_srt.encode("utf-8"), file_name="subtitles.srt", mime="text/plain")
